@@ -1,0 +1,419 @@
+[
+{
+    "model": "shop.category",
+    "pk": 13,
+    "fields": {
+        "name": "Seasonal Arrangements",
+        "description": ""
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 14,
+    "fields": {
+        "name": "Bouquets",
+        "description": ""
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 15,
+    "fields": {
+        "name": "Potted Plants",
+        "description": ""
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 16,
+    "fields": {
+        "name": "Romantic Collection",
+        "description": ""
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 17,
+    "fields": {
+        "name": "Elegant Florals",
+        "description": ""
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 18,
+    "fields": {
+        "name": "Gift Sets",
+        "description": ""
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 28,
+    "fields": {
+        "name": "Autumn Whisper",
+        "description": "Warm tones of amber and deep red inspired by fall evenings.",
+        "price": "4500.00",
+        "stock": 10,
+        "category": 13,
+        "image_url": "https://www.dundrumblooms.ie/websites/800/Images/product/1868090546large02.jpg?ver=6",
+        "created_at": "2026-04-08T20:39:29.527Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 29,
+    "fields": {
+        "name": "Spring Bloom Harmony",
+        "description": "A fresh mix of pastel flowers capturing renewal.",
+        "price": "4000.00",
+        "stock": 20,
+        "category": 13,
+        "image_url": "https://i0.wp.com/flowerworksph.com/wp-content/uploads/2021/07/20inch-10.jpg?fit=1500%2C1500&ssl=1",
+        "created_at": "2026-04-08T20:39:29.538Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 30,
+    "fields": {
+        "name": "Winter Serenity",
+        "description": "Calm arrangement of whites and soft greens.",
+        "price": "4200.00",
+        "stock": 15,
+        "category": 13,
+        "image_url": "https://cdn.uaeflowers.com/uploads/product/uaeflowers/Snowy_Serenity_Bouquet_94_19731.webp",
+        "created_at": "2026-04-08T20:39:29.549Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 31,
+    "fields": {
+        "name": "Summer Radiance",
+        "description": "Bright and lively florals reflecting summer energy.",
+        "price": "4800.00",
+        "stock": 25,
+        "category": 13,
+        "image_url": "https://www.theflowershopofashbourne.co.uk/upload/mt/ashb800/products/Interflora/lg_null-summer-radiance-trending-bouquet.jpg",
+        "created_at": "2026-04-08T20:39:29.559Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 32,
+    "fields": {
+        "name": "Blush Petal Bouquet",
+        "description": "Soft pink blooms for a gentle touch.",
+        "price": "3500.00",
+        "stock": 30,
+        "category": 14,
+        "image_url": "https://b2895521.smushcdn.com/2895521/wp-content/uploads/2026/03/blush-petal-delight-bouquet_03.jpg?lossy=1&strip=1&webp=1",
+        "created_at": "2026-04-08T20:39:29.567Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 33,
+    "fields": {
+        "name": "Pure White Grace",
+        "description": "Minimalist bouquet of white flowers.",
+        "price": "3800.00",
+        "stock": 20,
+        "category": 14,
+        "image_url": "https://lafleuraison.ca/cdn/shop/files/IMG_6690_large.jpg?v=1749587280",
+        "created_at": "2026-04-08T20:39:29.575Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 34,
+    "fields": {
+        "name": "Sunset Bloom Mix",
+        "description": "Vibrant blend of warm tones.",
+        "price": "4200.00",
+        "stock": 10,
+        "category": 14,
+        "image_url": "https://asset.bloomnation.com/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1762222607/vendor/9485/catalog/product/2/0/20240829153119_file_66d09447ec8ec",
+        "created_at": "2026-04-08T20:39:29.583Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 35,
+    "fields": {
+        "name": "Velvet Rose Bundle",
+        "description": "Classic red roses in a modern style.",
+        "price": "5500.00",
+        "stock": 25,
+        "category": 14,
+        "image_url": "https://www.toyflorist.com/cdn/shop/files/red_rose_50.heic?v=1738287943&width=1946",
+        "created_at": "2026-04-08T20:39:29.592Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 36,
+    "fields": {
+        "name": "Pastel Dream Bouquet",
+        "description": "Delicate mix of soft hues.",
+        "price": "3900.00",
+        "stock": 15,
+        "category": 14,
+        "image_url": "https://image.floranext.com/instances/bmflowershop_com/catalog/product/i/m/img_5852_68127e4b2f020.jpg.webp?h=800&w=800&r=255&g=255&b=255",
+        "created_at": "2026-04-08T20:39:29.601Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 37,
+    "fields": {
+        "name": "Green Haven Plant",
+        "description": "Lush indoor plant for calming presence.",
+        "price": "2500.00",
+        "stock": 30,
+        "category": 15,
+        "image_url": "https://image.floranext.com/instances/flowersonthecorner_com/catalog/product/i/n/indoor-dish-garden-scaled_6501cdac1a4da.jpg.webp?h=700&w=700&r=255&g=255&b=255",
+        "created_at": "2026-04-08T20:39:29.609Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 38,
+    "fields": {
+        "name": "Urban Jungle Pot",
+        "description": "Bold green plant for modern interiors.",
+        "price": "3200.00",
+        "stock": 20,
+        "category": 15,
+        "image_url": "https://mobileimages.lowes.com/productimages/25dd6e5e-b69f-43d9-9274-aaaa160ef0b1/72930725.jpeg",
+        "created_at": "2026-04-08T20:39:29.618Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 39,
+    "fields": {
+        "name": "Mini Zen Garden",
+        "description": "Compact plant arrangement for balance.",
+        "price": "2800.00",
+        "stock": 15,
+        "category": 15,
+        "image_url": "https://www.ugaoo.com/cdn/shop/articles/zen.jpg?v=1710937456",
+        "created_at": "2026-04-08T20:39:29.627Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 40,
+    "fields": {
+        "name": "Evergreen Touch",
+        "description": "Low-maintenance plant stays vibrant.",
+        "price": "2000.00",
+        "stock": 30,
+        "category": 15,
+        "image_url": "https://m.media-amazon.com/images/I/71T0FsPigxL._AC_UF894,1000_QL80_.jpg",
+        "created_at": "2026-04-08T20:39:29.635Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 41,
+    "fields": {
+        "name": "Ceramic Bloom Pot",
+        "description": "Flowering plant in a clean ceramic pot.",
+        "price": "3500.00",
+        "stock": 10,
+        "category": 15,
+        "image_url": "https://txceramics.com/wp-content/uploads/2023/10/Colorful-Gardening-containers-7.webp",
+        "created_at": "2026-04-08T20:39:29.643Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 42,
+    "fields": {
+        "name": "Crimson Love Roses",
+        "description": "Deep red roses for quiet passion.",
+        "price": "6000.00",
+        "stock": 20,
+        "category": 16,
+        "image_url": "https://flyflowers.net/cdn/shop/files/08C7F6EE-228B-4367-A6A3-C87F52D2D3C1.jpg?v=1733195139&width=1920",
+        "created_at": "2026-04-08T20:39:29.652Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 43,
+    "fields": {
+        "name": "Soft Embrace Bouquet",
+        "description": "Tender mix of soft pink and white blooms.",
+        "price": "4500.00",
+        "stock": 15,
+        "category": 16,
+        "image_url": "https://cdn.uaeflowers.com/uploads/product/uaeflowers/JUL2025/SoftEmbraceBouquet-1752825634616.webp",
+        "created_at": "2026-04-08T20:39:29.660Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 44,
+    "fields": {
+        "name": "Moonlight Roses",
+        "description": "Pale roses with a delicate glow.",
+        "price": "5000.00",
+        "stock": 10,
+        "category": 16,
+        "image_url": "https://www.gracerosefarm.com/cdn/shop/files/moonlightromantica4-4.jpg?v=1764113402&width=2494",
+        "created_at": "2026-04-08T20:39:29.668Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 45,
+    "fields": {
+        "name": "Endless Affection",
+        "description": "Balanced arrangement for lasting feelings.",
+        "price": "5500.00",
+        "stock": 15,
+        "category": 16,
+        "image_url": "https://www.ukrainegiftdelivery.com/cdn/shop/files/endless-love-bouquet-flowers-817.jpg?v=1755861597&width=768",
+        "created_at": "2026-04-08T20:39:29.677Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 46,
+    "fields": {
+        "name": "Ivory Bloom Set",
+        "description": "Refined composition of light-toned flowers.",
+        "price": "4500.00",
+        "stock": 10,
+        "category": 17,
+        "image_url": "https://www.mikonaflowers.com/cdn/shop/files/IMG_7004.jpg?v=1764191978&width=550",
+        "created_at": "2026-04-08T20:39:29.685Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 47,
+    "fields": {
+        "name": "Golden Touch Arrangement",
+        "description": "Soft florals with warm accents.",
+        "price": "5000.00",
+        "stock": 15,
+        "category": 17,
+        "image_url": "https://assets.eflorist.com/site/48185077/assets/products/PZM_/skusku7280005.jpg?1692374753778&impolicy=hero&impolicy=hero",
+        "created_at": "2026-04-08T20:39:29.694Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 48,
+    "fields": {
+        "name": "Modern Petal Design",
+        "description": "Structured contemporary style.",
+        "price": "3500.00",
+        "stock": 20,
+        "category": 17,
+        "image_url": "https://asset.bloomnation.com/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1762677002/vendor/5540/catalog/product/2/0/2025108182952_file_mhqz81mvr5mbp92",
+        "created_at": "2026-04-08T20:39:29.703Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 49,
+    "fields": {
+        "name": "Pure Harmony Flowers",
+        "description": "Balanced tones and textures.",
+        "price": "4000.00",
+        "stock": 10,
+        "category": 17,
+        "image_url": "https://content2.flowwow-images.com/data/flowers/524x524/23/1752846556_79821023.jpg",
+        "created_at": "2026-04-08T20:39:29.713Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 50,
+    "fields": {
+        "name": "Floral Delight Box",
+        "description": "Fresh flowers with thoughtful additions.",
+        "price": "5500.00",
+        "stock": 10,
+        "category": 18,
+        "image_url": "https://flowerstonepal.com/cdn/shop/files/romantic-bloom-chocolate-delight-wooden-gift-box-6207938.png?v=1767139507&width=1445",
+        "created_at": "2026-04-08T20:39:29.722Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 51,
+    "fields": {
+        "name": "Sweet Blossom Set",
+        "description": "Floral arrangement with a light gift.",
+        "price": "4500.00",
+        "stock": 15,
+        "category": 18,
+        "image_url": "https://idlewildfloral.com/cdn/shop/files/full-bloom-gift-box-gift-giving-send-a-bouquet-the-best-flower-delivery-1173984967.jpg?v=1750268830&width=900",
+        "created_at": "2026-04-08T20:39:29.733Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 52,
+    "fields": {
+        "name": "Elegant Surprise Package",
+        "description": "Personal and memorable gift.",
+        "price": "5000.00",
+        "stock": 10,
+        "category": 18,
+        "image_url": "https://www.flowerchimp.com/cdn/shop/files/graceful-gift-box-1088068096_1600x.jpg?v=1768004288",
+        "created_at": "2026-04-08T20:39:29.741Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 53,
+    "fields": {
+        "name": "Bloom & Treat Combo",
+        "description": "Flowers paired with a simple treat.",
+        "price": "3500.00",
+        "stock": 25,
+        "category": 18,
+        "image_url": "https://assets.eflorist.com/site/56390200/assets/products/PHR_/sku14590567.jpg?1766768216831",
+        "created_at": "2026-04-08T20:39:29.749Z"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 54,
+    "fields": {
+        "name": "Signature Gift Collection",
+        "description": "Premium selection and curated details.",
+        "price": "6000.00",
+        "stock": 10,
+        "category": 18,
+        "image_url": "https://grovehousechicago.com/cdn/shop/files/20240131054858_IMG_3898.jpg?v=1706897779&width=1946",
+        "created_at": "2026-04-08T20:39:29.758Z"
+    }
+},
+{
+    "model": "shop.cart",
+    "pk": 1,
+    "fields": {
+        "customer_username": "elhocine",
+        "created_at": "2026-04-08T20:25:08.031Z",
+        "updated_at": "2026-04-08T20:25:08.031Z"
+    }
+},
+{
+    "model": "shop.cart",
+    "pk": 2,
+    "fields": {
+        "customer_username": "admin",
+        "created_at": "2026-04-08T20:26:40.428Z",
+        "updated_at": "2026-04-08T20:26:40.428Z"
+    }
+}
+]

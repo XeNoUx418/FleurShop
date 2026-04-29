@@ -1,0 +1,7 @@
+how to run consul:
+consul agent -dev -ui -client=0.0.0.0
+
+email & password :
+fleurshop.support@gmail.com
+wams2026
+

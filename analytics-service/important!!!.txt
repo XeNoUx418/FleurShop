@@ -1,0 +1,5 @@
+# 1. Generate the migration files for your app
+docker compose exec analytics-service python manage.py makemigrations analytics
+
+# 2. Apply them to the 'analytics' database
+docker compose exec analytics-service python manage.py migrate

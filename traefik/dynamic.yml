@@ -1,0 +1,71 @@
+http:
+  routers:
+    auth-static-router:
+      entryPoints:
+        - "web"
+      rule: "PathPrefix(`/static/`)"
+      service: "auth-service"
+      priority: 100
+
+    auth-router:
+      entryPoints:
+        - "web"
+      rule: "PathPrefix(`/auth`) || PathPrefix(`/admin`)"
+      service: "auth-service"
+      priority: 10
+
+    api-admin-router:
+      entryPoints:
+        - "web"
+      rule: "PathPrefix(`/api/admin`)"
+      service: "api-service"
+      priority: 20
+
+    api-admin-panel-router:
+      entryPoints:
+        - "web"
+      rule: "PathPrefix(`/api-admin`)"
+      service: "api-service"
+      priority: 10
+
+    api-router:
+      entryPoints:
+        - "web"
+      rule: "PathPrefix(`/api`)"
+      service: "api-service"
+      priority: 10
+
+    frontend-router:
+      entryPoints:
+        - "web"
+      rule: "PathPrefix(`/`)"
+      service: "frontend-service"
+      priority: 1
+      
+    analytics-router:
+      entryPoints:
+        - "web"
+      rule: "PathPrefix(`/analytics`)"
+      service: "analytics-service"
+      priority: 10
+
+  services:
+    auth-service:
+      loadBalancer:
+        servers:
+          - url: "http://auth-service:8001"
+
+    api-service:
+      loadBalancer:
+        servers:
+          - url: "http://api-service:8002"
+
+    analytics-service:
+      loadBalancer:
+        servers:
+          - url: "http://analytics-service:8003"
+
+    frontend-service:
+      loadBalancer:
+        servers:
+          - url: "http://frontend:3000"

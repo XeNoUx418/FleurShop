@@ -1,0 +1,180 @@
+services:
+
+  # ── Infrastructure ─────────────────────────────────────────
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB:       ${POSTGRES_DB}
+      POSTGRES_USER:     ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout:  5s
+      retries:  5
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS}
+    ports:
+      - "15672:15672"   # management UI
+      - "5672:5672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout:  5s
+      retries:  5
+
+  consul:
+    image: consul:1.15
+    command: agent -dev -ui -client=0.0.0.0
+    ports:
+      - "8500:8500"     # Consul UI
+
+  traefik:
+    image: traefik:v3.0
+    ports:
+      - "80:80"         # main entry point
+      - "8080:8080"     # Traefik dashboard
+    volumes:
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml
+      - ./traefik/dynamic.yml:/etc/traefik/dynamic.yml
+    depends_on:
+      - consul
+
+  # ── Application Services ───────────────────────────────────
+
+  auth-service:
+    build: ./auth-service
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
+      DEBUG:             ${DEBUG}
+      POSTGRES_DB:       ${POSTGRES_DB}
+      POSTGRES_USER:     ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_HOST:     postgres
+      POSTGRES_PORT:     5432
+      CONSUL_HOST:       consul
+      CONSUL_PORT:       8500
+      SERVICE_IP:        auth-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+      consul:
+        condition: service_started
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8001"
+
+  api-service:
+    build: ./api-service
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
+      DEBUG:             ${DEBUG}
+      POSTGRES_DB:       ${POSTGRES_DB}
+      POSTGRES_USER:     ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_HOST:     postgres
+      POSTGRES_PORT:     5432
+      RABBITMQ_HOST:     rabbitmq
+      RABBITMQ_USER:     ${RABBITMQ_USER}    
+      RABBITMQ_PASS:     ${RABBITMQ_PASS}    
+      CONSUL_HOST:       consul
+      CONSUL_PORT:       8500
+      SERVICE_IP:        api-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      consul:
+        condition: service_started
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8002"
+
+  worker-service:
+    build: ./worker-service
+    environment:
+      PYTHONUNBUFFERED: 1
+
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: ${RABBITMQ_USER}
+      RABBITMQ_PASS: ${RABBITMQ_PASS}
+
+      EMAIL_HOST:     ${EMAIL_HOST}
+      EMAIL_PORT:     ${EMAIL_PORT}
+      EMAIL_ADDRESS:  ${EMAIL_ADDRESS}
+      EMAIL_PASSWORD: ${EMAIL_PASSWORD}
+      EMAIL_FROM:     ${EMAIL_FROM}
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    command: >
+      sh -c "sleep 5 && python consumer.py"
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - auth-service
+      - api-service
+    volumes:
+      - ./frontend/src:/app/src      # Mount source for live edits
+      - /app/node_modules            # Prevent overwriting node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true     # Backup env var for polling
+
+
+  inventory-alert-service:
+    build: ./inventory-alert-service
+    environment:
+      PYTHONUNBUFFERED: 1
+
+      RABBITMQ_HOST:  rabbitmq
+      RABBITMQ_USER:  ${RABBITMQ_USER}
+      RABBITMQ_PASS:  ${RABBITMQ_PASS}
+      EMAIL_HOST:     ${EMAIL_HOST}
+      EMAIL_PORT:     ${EMAIL_PORT}
+      EMAIL_ADDRESS:  ${EMAIL_ADDRESS}
+      EMAIL_PASSWORD: ${EMAIL_PASSWORD}
+      EMAIL_FROM:     ${EMAIL_FROM}
+      ADMIN_EMAIL:    ${ADMIN_EMAIL}
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    command: >
+      sh -c "sleep 5 && python consumer.py"
+
+  analytics-service:
+    build: ./analytics-service
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
+      DEBUG:             ${DEBUG}
+      ANALYTICS_DB:      analytics
+      POSTGRES_USER:     ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_HOST:     postgres
+      POSTGRES_PORT:     5432
+      RABBITMQ_HOST:     rabbitmq
+      RABBITMQ_USER:     ${RABBITMQ_USER}
+      RABBITMQ_PASS:     ${RABBITMQ_PASS}
+      CONSUL_HOST:       consul
+      CONSUL_PORT:       8500
+      SERVICE_IP:        analytics-service 
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      consul:
+        condition: service_started
+
+# ── Volumes ────────────────────────────────────────────────────
+volumes:
+  postgres_data:

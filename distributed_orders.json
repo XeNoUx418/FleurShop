@@ -1,0 +1,462 @@
+[
+    {
+        "model": "shop.order",
+        "pk": 16,
+        "fields": {
+            "customer_email": "mariabendouhou12@gmail.com",
+            "customer_username": "maria",
+            "status": "pending",
+            "original_total": "4800.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "4800.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-14T05:25:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 48,
+        "fields": {
+            "order": 16,
+            "product": 31,
+            "quantity": 1,
+            "price": "4800.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 17,
+        "fields": {
+            "customer_email": "zohraayamerabti@gmail.com",
+            "customer_username": "aya",
+            "status": "preparing",
+            "original_total": "13000.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "13000.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-13T18:35:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 49,
+        "fields": {
+            "order": 17,
+            "product": 42,
+            "quantity": 1,
+            "price": "6000.0"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 50,
+        "fields": {
+            "order": 17,
+            "product": 32,
+            "quantity": 2,
+            "price": "3500.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 18,
+        "fields": {
+            "customer_email": "zohraayamerabti@gmail.com",
+            "customer_username": "aya",
+            "status": "delivered",
+            "original_total": "9600.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "9600.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-12T13:57:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 51,
+        "fields": {
+            "order": 18,
+            "product": 31,
+            "quantity": 2,
+            "price": "4800.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 19,
+        "fields": {
+            "customer_email": "mariabendouhou12@gmail.com",
+            "customer_username": "maria",
+            "status": "delivered",
+            "original_total": "6000.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "6000.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-11T16:55:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 52,
+        "fields": {
+            "order": 19,
+            "product": 54,
+            "quantity": 1,
+            "price": "6000.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 20,
+        "fields": {
+            "customer_email": "hocinesino12@gmail.com",
+            "customer_username": "user",
+            "status": "preparing",
+            "original_total": "7000.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "7000.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-10T09:46:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 53,
+        "fields": {
+            "order": 20,
+            "product": 32,
+            "quantity": 2,
+            "price": "3500.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 21,
+        "fields": {
+            "customer_email": "elhocine.baba.ahmed@gmail.com",
+            "customer_username": "elhocine",
+            "status": "preparing",
+            "original_total": "15100.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "15100.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-09T23:36:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 54,
+        "fields": {
+            "order": 21,
+            "product": 31,
+            "quantity": 2,
+            "price": "4800.0"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 55,
+        "fields": {
+            "order": 21,
+            "product": 35,
+            "quantity": 1,
+            "price": "5500.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 22,
+        "fields": {
+            "customer_email": "hocinesino12@gmail.com",
+            "customer_username": "user",
+            "status": "delivered",
+            "original_total": "8400.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "8400.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-08T12:22:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 56,
+        "fields": {
+            "order": 22,
+            "product": 30,
+            "quantity": 2,
+            "price": "4200.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 23,
+        "fields": {
+            "customer_email": "elhocine.baba.ahmed@gmail.com",
+            "customer_username": "elhocine",
+            "status": "pending",
+            "original_total": "17500.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "17500.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-07T03:28:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 57,
+        "fields": {
+            "order": 23,
+            "product": 42,
+            "quantity": 1,
+            "price": "6000.0"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 58,
+        "fields": {
+            "order": 23,
+            "product": 28,
+            "quantity": 1,
+            "price": "4500.0"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 59,
+        "fields": {
+            "order": 23,
+            "product": 32,
+            "quantity": 2,
+            "price": "3500.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 24,
+        "fields": {
+            "customer_email": "mariabendouhou12@gmail.com",
+            "customer_username": "maria",
+            "status": "preparing",
+            "original_total": "8300.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "8300.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-06T06:10:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 60,
+        "fields": {
+            "order": 24,
+            "product": 31,
+            "quantity": 1,
+            "price": "4800.0"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 61,
+        "fields": {
+            "order": 24,
+            "product": 32,
+            "quantity": 1,
+            "price": "3500.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 25,
+        "fields": {
+            "customer_email": "elhocine.baba.ahmed@gmail.com",
+            "customer_username": "elhocine",
+            "status": "preparing",
+            "original_total": "21000.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "21000.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-05T03:57:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 62,
+        "fields": {
+            "order": 25,
+            "product": 54,
+            "quantity": 2,
+            "price": "6000.0"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 63,
+        "fields": {
+            "order": 25,
+            "product": 28,
+            "quantity": 2,
+            "price": "4500.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 26,
+        "fields": {
+            "customer_email": "zack@gmail.com",
+            "customer_username": "zack",
+            "status": "pending",
+            "original_total": "5500.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "5500.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-04T23:43:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 64,
+        "fields": {
+            "order": 26,
+            "product": 35,
+            "quantity": 1,
+            "price": "5500.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 27,
+        "fields": {
+            "customer_email": "mariabendouhou12@gmail.com",
+            "customer_username": "maria",
+            "status": "pending",
+            "original_total": "4800.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "4800.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-03T17:50:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 65,
+        "fields": {
+            "order": 27,
+            "product": 31,
+            "quantity": 1,
+            "price": "4800.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 28,
+        "fields": {
+            "customer_email": "elhocine.baba.ahmed@gmail.com",
+            "customer_username": "elhocine",
+            "status": "preparing",
+            "original_total": "12900.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "12900.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-02T23:56:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 66,
+        "fields": {
+            "order": 28,
+            "product": 28,
+            "quantity": 1,
+            "price": "4500.0"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 67,
+        "fields": {
+            "order": 28,
+            "product": 30,
+            "quantity": 2,
+            "price": "4200.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 29,
+        "fields": {
+            "customer_email": "hocinesino12@gmail.com",
+            "customer_username": "user",
+            "status": "preparing",
+            "original_total": "12000.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "12000.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-04-01T05:53:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 68,
+        "fields": {
+            "order": 29,
+            "product": 42,
+            "quantity": 2,
+            "price": "6000.0"
+        }
+    },
+    {
+        "model": "shop.order",
+        "pk": 30,
+        "fields": {
+            "customer_email": "zohraayamerabti@gmail.com",
+            "customer_username": "aya",
+            "status": "preparing",
+            "original_total": "9600.00",
+            "discount_amount": "0.00",
+            "gift_card_amount": "0.00",
+            "final_total": "9600.00",
+            "coupon": null,
+            "gift_card": null,
+            "created_at": "2026-03-31T20:37:00.000Z"
+        }
+    },
+    {
+        "model": "shop.orderitem",
+        "pk": 69,
+        "fields": {
+            "order": 30,
+            "product": 31,
+            "quantity": 2,
+            "price": "4800.0"
+        }
+    }
+]

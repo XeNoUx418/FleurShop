@@ -1,0 +1,16 @@
+Terminal 1 — Django Auth Service
+
+cd fleurshop/auth-service
+
+# Reactivate the virtual environment
+venv\Scripts\activate
+
+# Run the server
+python manage.py runserver 8001
+
+Terminal 2 — React Frontend
+
+fleurshop/frontend
+
+# Run Vite
+npm run dev

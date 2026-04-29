@@ -1,0 +1,7 @@
+django
+djangorestframework
+django-cors-headers
+pika
+psycopg2-binary
+gunicorn
+python-consul
